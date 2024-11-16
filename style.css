@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  background-color: #fefefe;
+}
+
+.container {
+  margin: auto;
+  width: 600px;
+  margin-top: 80px;
+  background-color: #fefefe;
+  padding: 30px;
+  box-shadow: 1px 1px 3px 3px rgb(223, 221, 221);
+  border-radius: 5px;
+}
+
+.heading_primary {
+  text-align: center;
+  padding: 20px;
+}
+
+.champ1,
+.champ2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.nom{
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+}
+span {
+  color: #333;
+  font-size: 2rem;
+}
+
+input {
+  padding: 1rem;
+  border: rgb(204, 202, 202) 1px solid;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.button_send {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(218, 215, 215);
+}
+
+.button_send:hover {
+  background-color: #1d7ede;
+  color: #ffff;
+}
+
+table {
+  margin: auto;
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+table,
+th,
+td {
+  border: 1px solid #333;
+}
+
+th,
+td {
+  padding: 10px 5px;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.th_fname,
+.th_lname,
+.th_email {
+  width: 15%;
+}
+.th_phone {
+  width: 10%;
+}
+
+.actions {
+  width: 4%;
+}
+.number {
+  width: 2%;
+}
+
+.update,
+.delete {
+  padding: 6px;
+  border: none;
+  background-color: orange;
+  color: #fefefe;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+.delete {
+  margin-left: 10px;
+  background-color: red;
+}
+
+.noUserMessage{
+  text-align: center;
+}
+
+.error {
+  outline: 2px solid red;
+}
+
+/* Le medias queries */
+@media(max-width: 480px){
+  .champ1,
+.champ2 {
+  display: block;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+table {
+  margin: auto;
+  width: 60rem;
+  border-collapse: collapse;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+th{
+  padding: 10px 5px;
+  text-align: left;
+  font-size: 1.4rem;
+}
+.actions {
+  width: 7rem;
+}
+
+}
