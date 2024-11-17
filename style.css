@@ -141,6 +141,13 @@ td {
 
 /* Le medias queries */
 @media(max-width: 480px){
+
+  .container {
+    margin: auto;
+    width: 60rem;
+    
+  }
+
   .champ1,
 .champ2 {
   display: block;
@@ -161,7 +168,7 @@ th{
   font-size: 1.4rem;
 }
 .actions {
-  width: 7rem;
+  width: 8rem;
 }
 
 }
