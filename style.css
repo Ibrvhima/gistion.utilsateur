@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +17,8 @@ body {
 
 .container {
   margin: auto;
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
   margin-top: 80px;
   background-color: #fefefe;
   padding: 30px;
@@ -36,7 +38,7 @@ body {
   gap: 2rem;
 }
 
-.nom{
+.nom {
   display: flex;
   flex-direction: column;
 }
@@ -48,6 +50,7 @@ label {
   gap: 0.6rem;
   font-size: 1.6rem;
 }
+
 span {
   color: #333;
   font-size: 2rem;
@@ -86,6 +89,7 @@ table {
   margin-top: 50px;
   font-size: 1.2rem;
 }
+
 table,
 th,
 td {
@@ -104,6 +108,7 @@ td {
 .th_email {
   width: 15%;
 }
+
 .th_phone {
   width: 10%;
 }
@@ -111,6 +116,7 @@ td {
 .actions {
   width: 4%;
 }
+
 .number {
   width: 2%;
 }
@@ -131,7 +137,7 @@ td {
   background-color: red;
 }
 
-.noUserMessage{
+.noUserMessage {
   text-align: center;
 }
 
@@ -139,36 +145,50 @@ td {
   outline: 2px solid red;
 }
 
-/* Le medias queries */
-@media(max-width: 480px){
+/* Media Queries */
 
-  .container {
-    margin: auto;
-    width: 60rem;
-    
+/* For tablets (width 768px and below) */
+@media (max-width: 768px) {
+  .champ1,
+  .champ2 {
+    grid-template-columns: 1fr; /* Stacks the inputs vertically */
   }
 
-  .champ1,
-.champ2 {
-  display: block;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  table {
+    width: 100%; /* Make table occupy full width */
+  }
+
+  th,
+  td {
+    font-size: 1.6rem; /* Reduce font size */
+  }
 }
 
-table {
-  margin: auto;
-  width: 60rem;
-  border-collapse: collapse;
-  margin-top: 50px;
-  font-size: 1.2rem;
-}
-th{
-  padding: 10px 5px;
-  text-align: left;
-  font-size: 1.4rem;
-}
-.actions {
-  width: 8rem;
-}
+/* For mobile devices (width 480px and below) */
+@media (max-width: 480px) {
+  .container {
+    margin-top: 40px;
+    padding: 20px;
+  }
 
+  label {
+    font-size: 1.4rem; /* Reduce label font size */
+  }
+
+  input {
+    font-size: 1.4rem; /* Adjust input font size */
+  }
+
+  .button_send {
+    font-size: 1.4rem; /* Adjust button font size */
+  }
+
+  table {
+    font-size: 1.4rem;
+  }
+
+  .update,
+  .delete {
+    font-size: 1.2rem; /* Adjust button font size */
+  }
 }
