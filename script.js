@@ -110,9 +110,12 @@ formularEl.addEventListener("submit", function (e) {
 
 // Gestion des clics sur le tableau
 userTableEl.addEventListener("click", function (e) {
+<<<<<<< HEAD
   const button = e.target.closest("button"); 
 
   if (!button) return;
+=======
+>>>>>>> 53252aa92f2017b7eb195e561ce21636acd3aca6
   if (e.target.classList.contains("delete")) {
     // Suppression de la ligne
     const row = e.target.closest("tr");
