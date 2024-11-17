@@ -32,7 +32,6 @@ function updateTableNumbers() {
   number = updatedNumber; // Met à jour le numéro global
 }
 
-
 // Fonction pour vérifier si le tableau est vide
 function checkIfTableEmpty() {
   const rows = userTableEl.querySelectorAll("tr").length;
@@ -64,13 +63,13 @@ formularEl.addEventListener("submit", function (e) {
   if (!validInput.test(lastNameValue))
     return alert("Erreur : entrez un prenom correct 🙄");
 
-
   const contactPattern = /^\d{9}$/;
   if (!contactPattern.test(contactValue)) {
-    alert("Erreur : le numéro de téléphone doit contenir exactement 9 chiffres.");
-    return; 
+    alert(
+      "Erreur : le numéro de téléphone doit contenir exactement 9 chiffres."
+    );
+    return;
   }
-
 
   if (editingRow) {
     // Mise à jour de la ligne existante
@@ -97,8 +96,14 @@ formularEl.addEventListener("submit", function (e) {
 
   // Ajout de la ligne au tableau
   userTableEl.appendChild(newLine);
-  
-  users.push({ number, firstNameValue, lastNameValue, emailValue, contactValue });
+
+  users.push({
+    number,
+    firstNameValue,
+    lastNameValue,
+    emailValue,
+    contactValue,
+  });
   number++;
   checkIfTableEmpty();
 
@@ -110,12 +115,10 @@ formularEl.addEventListener("submit", function (e) {
 
 // Gestion des clics sur le tableau
 userTableEl.addEventListener("click", function (e) {
-<<<<<<< HEAD
-  const button = e.target.closest("button"); 
+  const button = e.target.closest("button");
 
   if (!button) return;
-=======
->>>>>>> 53252aa92f2017b7eb195e561ce21636acd3aca6
+
   if (e.target.classList.contains("delete")) {
     // Suppression de la ligne
     const row = e.target.closest("tr");
@@ -138,13 +141,10 @@ userTableEl.addEventListener("click", function (e) {
     lastNameEl.value = lastName;
     emailEl.value = email;
     contactEl.value = phone;
-//modification de la ligne en cours
+    //modification de la ligne en cours
     editingRow = row;
     // Supprimer la ligne en cours
     //row.remove();
     checkIfTableEmpty();
-
   }
 });
-
-
