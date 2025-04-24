@@ -1,67 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Users</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="heading_primary">Gestion des Utilisateurs</h1>
-      <form action="" class="formulaire">
-        <div class="champ1">
-          <div class="nom">
-            <label for="First_name"> <span><ion-icon name="person"></ion-icon></span> First Name</label>
-            <input type="text" class="fname" required autofocus />
-          </div>
-          <div class="nom">
-            <label for="Last_name"><span><ion-icon name="card"></ion-icon></span> Last name</label>
-            <input type="text" class="lname" required/>
-          </div>
-        </div>
-        <div class="champ2">
-          <div class="nom">
-            <label for="Email"><span><ion-icon name="mail"></ion-icon></span> Email</label>
-            <input type="email" class="email"  required />
-          </div>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des utilisateurs</title>
+  <!-- Ajout de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Si tu veux ajouter du style personnalisé -->
+  <!-- Ajout de FontAwesome pour les icônes -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
 
-          <div class="nom">
-            <label for="Contact"><span><ion-icon name="call"></ion-icon></span> Phone</label>
-            <input type="text" id="number-input" max.length="9" class="contact" required />
-          </div>
-        </div>
-        <button type="submit" class="button_send">send</button>
-      </form>
+  <div class="container mt-5">
+    <!-- Message lorsqu'il n'y a pas d'utilisateurs -->
+    <div id="noUserMessage" class="alert alert-warning" style="display: none;">
+      Aucune donnée disponible.
     </div>
-    <p id="noUserMessage">Aucun utilisateur</p>
 
-    <div class="tableau">
-      <table>
-        <thead>
-          <tr>
-            <th class="number">N°</th>
-            <th class="th_fname">First Name</th>
-            <th class="th_lname">Last Name</th>
-            <th class="th_email">Email</th>
-            <th class="th_phone">Phone</th>
-            <th class="actions">Actions</th>
-          </tr>
-        </thead>
-        <tbody class="userTable hidden"></tbody>
-      </table>
-    </div>
-    
+    <!-- Formulaire -->
+    <form class="formulaire">
+      <div class="mb-3">
+        <label for="fname" class="form-label">
+          <i class="fas fa-user"></i> Prénom
+        </label>
+        <input type="text" id="fname" class="form-control fname" placeholder=" ex: jhon">
+      </div>
 
+      <div class="mb-3">
+        <label for="lname" class="form-label">
+          <i class="fas fa-user"></i> Nom
+        </label>
+        <input type="text" id="lname" class="form-control lname" placeholder="ex: Diallo">
+      </div>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
-  <script src="script.js"></script>
+      <div class="mb-3">
+        <label for="email" class="form-label">
+          <i class="fas fa-envelope"></i> Email
+        </label>
+        <input type="email" id="email" class="form-control email" placeholder="ex: xyz@gmail.com">
+      </div>
+
+      <div class="mb-3">
+        <label for="contact" class="form-label">
+          <i class="fas fa-phone"></i> Numéro
+        </label>
+        <input type="text" id="contact" class="form-control contact" placeholder="ex: 611000000">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+
+    <!-- Tableau des utilisateurs -->
+    <table class="table table-striped mt-4 userTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Email</th>
+          <th>Numéro</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Les lignes seront ajoutées ici -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Ajout de Bootstrap JS pour certains composants si nécessaire -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script> <!-- Ton script JavaScript -->
+</body>
 </html>
