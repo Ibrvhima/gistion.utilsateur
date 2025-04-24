@@ -1,194 +1,30 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 body {
-  font-family: sans-serif;
-  color: #333;
-  background-color: #fefefe;
+  font-family: "Arial", sans-serif;
 }
 
-.container {
-  margin: auto;
-  width: 90%;
-  max-width: 600px;
-  margin-top: 80px;
-  background-color: #fefefe;
-  padding: 30px;
-  box-shadow: 1px 1px 3px 3px rgb(223, 221, 221);
-  border-radius: 5px;
-}
-
-.heading_primary {
-  text-align: center;
-  padding: 20px;
-}
-
-.champ1,
-.champ2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.nom {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 1.6rem;
-}
-
-span {
-  color: #333;
-  font-size: 2rem;
-}
-
-input {
-  padding: 1rem;
-  border: rgb(204, 202, 202) 1px solid;
-  border-radius: 5px;
-  outline: none;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.button_send {
-  margin-top: 10px;
-  width: 100%;
-  padding: 5px 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-  border-radius: 5px;
-  border: none;
+#moon-icon,
+#sun-icon {
   cursor: pointer;
-  background-color: rgb(218, 215, 215);
 }
 
-.button_send:hover {
-  background-color: #1d7ede;
-  color: #ffff;
+#noUserMessage {
+  display: none;
 }
 
-table {
-  margin: auto;
-  width: 80%;
-  border-collapse: collapse;
-  margin-top: 50px;
-  font-size: 1.2rem;
+
+body.dark {
+  background-color: #121212;
+  color: white;
 }
 
-table,
-th,
-td {
-  border: 1px solid #333;
+body.dark .container {
+  background-color: #1e1e1e;
 }
 
-th,
-td {
-  padding: 10px 5px;
-  text-align: left;
-  font-size: 1.8rem;
+body.dark .table-striped tbody tr:nth-child(odd) {
+  background-color: #333;
 }
 
-.th_fname,
-.th_lname,
-.th_email {
-  width: 15%;
-}
-
-.th_phone {
-  width: 10%;
-}
-
-.actions {
-  width: 4%;
-}
-
-.number {
-  width: 2%;
-}
-
-.update,
-.delete {
-  padding: 6px;
-  border: none;
-  background-color: orange;
-  color: #fefefe;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: 800;
-}
-
-.delete {
-  margin-left: 10px;
-  background-color: red;
-}
-
-.noUserMessage {
-  text-align: center;
-}
-
-.error {
-  outline: 2px solid red;
-}
-
-/* Media Queries */
-
-/* For tablets (width 768px and below) */
-@media (max-width: 768px) {
-  .champ1,
-  .champ2 {
-    grid-template-columns: 1fr; /* Stacks the inputs vertically */
-  }
-
-  table {
-    width: 100%; /* Make table occupy full width */
-  }
-
-  th,
-  td {
-    font-size: 1.6rem; /* Reduce font size */
-  }
-}
-
-/* For mobile devices (width 480px and below) */
-@media (max-width: 480px) {
-  .container {
-    margin-top: 40px;
-    padding: 20px;
-  }
-
-  label {
-    font-size: 1.4rem; /* Reduce label font size */
-  }
-
-  input {
-    font-size: 1.4rem; /* Adjust input font size */
-  }
-
-  .button_send {
-    font-size: 1.4rem; /* Adjust button font size */
-  }
-
-  table {
-    font-size: 1.4rem;
-  }
-
-  .update,
-  .delete {
-    font-size: 1.2rem; /* Adjust button font size */
-  }
+body.dark .table-striped tbody tr:nth-child(even) {
+  background-color: #444;
 }
